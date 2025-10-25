@@ -97,6 +97,15 @@ Replace `<your-ip>` with the IP address from `ifconfig`.
 
 ---
 
+### Secure using SSL 
+
+```
+apt install certbot python3-certbot-nginx
+
+certbot --nginx -d yourdomain.com -d www.yourdomain.com
+
+```
+
 ## Notes
 
 - Using `--tunnel` is convenient for testing webhooks but **not recommended for production**.
