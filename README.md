@@ -97,11 +97,12 @@ Replace `<your-ip>` with the IP address from `ifconfig`.
 
 ---
 
-### If want to expose this with internal IPs in internal Network with Self Signed Certificate, please use caddy as proxy server.
+## Note: If want to expose this with internal IPs in internal Network with Self Signed Certificate, please use caddy as proxy server.
 
 Please run below script for SSL, added endpoint in Caddyfile and start it
 
-```
+```bash
+
 #!/bin/bash                                                 
 # ------------------------------                            # Configuration                                             # ------------------------------
 CERT_DIR="$HOME/caddy_certs"                                CERT_FILE="$CERT_DIR/fullchain.pem"                         KEY_FILE="$CERT_DIR/privkey.pem"
@@ -192,7 +193,7 @@ fi
 
 ```
 
-### Alternative Use Nginx
+## Alternative Use Nginx
 
 ```
 You can also use nginx with cerbot
