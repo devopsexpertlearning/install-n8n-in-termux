@@ -37,6 +37,7 @@ pkg install nodejs-lts
 ```
 pkg install clang libsqlite pkg-config python make binutils
 export GYP_DEFINES="android_ndk_path=''"
+pip install setuptools
 
 ```
 
