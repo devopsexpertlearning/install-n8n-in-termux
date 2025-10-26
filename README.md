@@ -195,8 +195,8 @@ fi
 
 ## Alternative Use Nginx
 
-```
-You can also use nginx with cerbot
+```bash
+#You can also use nginx with cerbot
 
 apt install certbot python3-certbot-nginx
 
