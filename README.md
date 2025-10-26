@@ -132,9 +132,13 @@ pkg install caddy -y
 
 #!/bin/bash                                                 
 # ------------------------------                            # Configuration                                             # ------------------------------
-CERT_DIR="$HOME/caddy_certs"                                CERT_FILE="$CERT_DIR/fullchain.pem"                         KEY_FILE="$CERT_DIR/privkey.pem"
-CONF_FILE="$CERT_DIR/openssl.cnf"                           CADDYFILE="$HOME/Caddyfile"
-CADDY_SERVICE="caddy"  # Adjust if running differently      
+CERT_DIR="$HOME/caddy_certs"
+CERT_FILE="$CERT_DIR/fullchain.pem"
+KEY_FILE="$CERT_DIR/privkey.pem"
+CONF_FILE="$CERT_DIR/openssl.cnf"
+CADDYFILE="$HOME/Caddyfile"
+CADDY_SERVICE="caddy"  # Adjust if running differently
+     
 mkdir -p "$CERT_DIR"                                                                                                    # ------------------------------
 # Detect all internal IPv4 addresses                        # ------------------------------
 IPS=$(ifconfig | grep -oP '\d+\.\d+\.\d+\.\d+' | grep -v '^127\.0\.0\.1$' | grep -v '^255\.' | grep -v '\.255$')                                                                    if [ -z "$IPS" ]; then                                          echo "No valid internal IPs found. Exiting."
